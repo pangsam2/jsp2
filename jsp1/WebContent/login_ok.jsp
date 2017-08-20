@@ -44,6 +44,8 @@ try {
 	ps.setString(1,id);
 	
 	//ResultSet rs = st.executeQuery(sql);
+	//select는 excuteQuery()
+	//update, delete, inset -> excuteUpdate (인트형 반환)
 	ResultSet rs = ps.executeQuery();
 	while(rs.next()) {
 		if(pwd.equals(rs.getString("password"))){

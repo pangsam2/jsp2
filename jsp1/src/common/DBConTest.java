@@ -12,15 +12,15 @@ public class DBConTest {
 	
 	public static void main(String[] args) {
 		Connection con;
-		String url="jdbc:mysql://localhost:3306/jsp_study";
+	/*	String url="jdbc:mysql://localhost:3306/jsp_study";
 		String id ="root";
-		String pwd="manager";
+		String pwd="manager";*/
 		Statement st;
 		try {
-			//드라이버 클래스를 사용하겠다.
-			Class.forName("org.mariadb.jdbc.Driver");
+			/*//드라이버 클래스를 사용하겠다.
+			Class.forName("org.mariadb.jdbc.Driver");*/
 			//DB연결객체 생성
-			con = DriverManager.getConnection(url,id,pwd);
+			con = DBConnector.getCon();
 			st=con.createStatement();
 			System.out.println("연결 성공");
 			ResultSet rs = st.executeQuery("select * from user");

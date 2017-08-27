@@ -51,6 +51,9 @@
 	</tr>
 	
 </table>
+
+<input type="hidden" name="command" value="signin">
+
 </form>
 
 </body>
